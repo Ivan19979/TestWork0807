@@ -1,6 +1,6 @@
 {
-  "name": "Weather App",
-  "short_name": "Weather",
+  "name": "Прогнозник",
+  "short_name": "Прогнозник",
   "description": "Проверьте текущую погоду и прогноз погоды в вашем городе",
   "start_url": "/",
   "display": "standalone",
