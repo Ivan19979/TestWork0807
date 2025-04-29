@@ -1,0 +1,17 @@
+.favoriteButton {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: var(--bs-gray-500);
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(--bs-red);
+    transform: scale(1.1);
+  }
+
+  &.favorited {
+    color: var(--bs-red);
+  }
+}

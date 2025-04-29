@@ -1,0 +1,12 @@
+@import './variables';
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  background-color: $body-bg;
+  color: $text-color;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+}

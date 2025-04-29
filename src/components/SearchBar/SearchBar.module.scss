@@ -1,0 +1,44 @@
+.searchForm {
+  max-width: 600px;
+  margin: 0 auto;
+
+  .searchInput {
+    border-radius: 0.25rem 0 0 0.25rem;
+    border-right: none;
+    transition: all 0.3s ease;
+
+    &:focus {
+      box-shadow: none;
+      border-color: var(--bs-primary);
+    }
+  }
+
+  button {
+    border-radius: 0 0.25rem 0.25rem 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--bs-primary);
+    }
+  }
+}
+
+// Адаптивные стили
+@media (max-width: 576px) {
+  .searchForm {
+    .input-group {
+      flex-direction: column;
+    }
+
+    input {
+      border-radius: 0.25rem;
+      border-right: 1px solid #ced4da;
+      margin-bottom: 0.5rem;
+    }
+
+    button {
+      border-radius: 0.25rem;
+      width: 100%;
+    }
+  }
+}

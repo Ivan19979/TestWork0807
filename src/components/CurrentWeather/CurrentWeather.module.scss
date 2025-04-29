@@ -1,0 +1,124 @@
+.currentWeather {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      color: var(--bs-primary);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .weather-main {
+      display: flex;
+      align-items: center;
+      margin: 1.5rem 0;
+
+      .weather-info {
+        margin-left: 1rem;
+
+        h3 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin-bottom: 0.25rem;
+          color: var(--bs-dark);
+        }
+
+        p {
+          margin-bottom: 0;
+          color: var(--bs-gray-600);
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .weather-details {
+      p {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+        color: var(--bs-gray-700);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        strong {
+          color: var(--bs-dark);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+// Темная тема (если нужно)
+[data-bs-theme="dark"] {
+  .currentWeather {
+    background: linear-gradient(135deg, #2c3034 0%, #212529 100%);
+    
+    .card-body {
+      .weather-main {
+        .weather-info {
+          h3 {
+            color: var(--bs-light);
+          }
+        }
+      }
+      
+      .weather-details {
+        p {
+          color: var(--bs-gray-400);
+          
+          strong {
+            color: var(--bs-white);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Адаптивность для мобильных устройств
+@media (max-width: 768px) {
+  .currentWeather {
+    .card-body {
+      padding: 1rem;
+
+      .weather-main {
+        flex-direction: column;
+        text-align: center;
+        margin: 1rem 0;
+
+        .weather-info {
+          margin-left: 0;
+          margin-top: 1rem;
+
+          h3 {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .row {
+        > div {
+          margin-bottom: 1rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

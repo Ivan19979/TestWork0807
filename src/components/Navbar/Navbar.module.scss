@@ -1,0 +1,21 @@
+@import 'variables';
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .nav_link {
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+    color: white;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
