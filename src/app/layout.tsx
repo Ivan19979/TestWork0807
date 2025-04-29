@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Прогноз погоды по городам мира',
   description: 'Проверьте текущую погоду и прогноз погоды в вашем городе',
-  manifest: 'site.webmanifest'
+  manifest: '/site.webmanifest'
 };
 
 export default function RootLayout({
