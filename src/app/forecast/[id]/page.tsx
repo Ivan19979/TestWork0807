@@ -3,16 +3,17 @@ import { notFound } from 'next/navigation';
 import { DailyForecast } from '@/components/DailyForecast/DailyForecast';
 import { LoadingSpinner } from '@/components/LoadingSpinner/LoadingSpinner';
 import { useWeather } from '@/hooks/useWeather';
+import { use } from 'react';
 
 interface ForecastPageProps {
-  params: {
-    id: number;
-  };
+  params: Promise<{
+    id: string;
+  }>
 }
 
 export default function ForecastPage({ params }: ForecastPageProps) {
-  const { id } = params;
-  const { forecast, loading, error } = useWeather(id);
+  const { id } = use(params);
+  const { forecast, loading, error } = useWeather(Number(id));
 
   if (error) {
     return notFound();

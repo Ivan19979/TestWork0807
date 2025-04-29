@@ -39,7 +39,7 @@ export const CityCard = ({ id }: CityCardProps) => {
             </div>
 
             <Link 
-              href={`/${id}`} 
+              href={`/forecast/${id}`} 
               className="stretched-link"
               aria-label={`Посмотреть погоду для ${id}`}
             />

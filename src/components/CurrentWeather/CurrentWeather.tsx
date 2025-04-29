@@ -37,7 +37,7 @@ export const CurrentWeather = ({ data }: CurrentWeatherProps) => {
         </div>
         <div className="mt-3">
           <Link 
-            href={`/${data.id}`}
+            href={`/forecast/${data.id}`}
             className="btn btn-sm btn-outline-primary"
           >
             Просмотр прогноза на 5 дней
