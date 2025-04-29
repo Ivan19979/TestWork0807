@@ -11,7 +11,7 @@ export const SearchBar = ({ onSearch }: SearchBarProps) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (city.trim()) {
-      onSearch(city);
+      onSearch(city.trim());
     }
   };
 
