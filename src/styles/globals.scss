@@ -1,10 +1,6 @@
 @import "./variables";
 @import "~bootstrap/scss/bootstrap";
 
-* {
-  font-family: cursive, serif;
-}
-
 body {
   background-color: $body-bg;
   color: $text-color;
