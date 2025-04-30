@@ -39,5 +39,5 @@ Next.js приложение для просмотра текущей погод
 1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/Ivan19979/TestWork0807.git
-   cd weather-app
+   cd TestWork0807
    ```
