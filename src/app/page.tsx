@@ -27,7 +27,7 @@ export default function HomePage() {
           <CurrentWeather data={weather} />
         </div>
       )}
-      <img src="/main.png" alt="Прогноз погоды" className={styles.img} />
+      <img src="/main.webp" alt="Прогноз погоды" className={styles.img} />
     </div>
   );
 }
