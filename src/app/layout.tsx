@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
-        <meta name="theme-color" content="#2563eb" />
+        <meta name="theme-color" content="#198754" />
       </head>
       <body className={inter.className}>
         <Navbar />
