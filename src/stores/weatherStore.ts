@@ -7,6 +7,11 @@ interface WeatherStore {
   removeFavorite: (id: number) => void;
 }
 
+interface WeatherSearchStore {
+  search: string;
+  setSearch: (city: string) => void;
+}
+
 export const useWeatherStore = create<WeatherStore>()(
   persist(
     (set) => ({
@@ -23,3 +28,11 @@ export const useWeatherStore = create<WeatherStore>()(
     }
   )
 );
+
+
+export const useTemporaryStore = create<WeatherSearchStore>((set) => ({
+  search: '',
+  setSearch: (city) => set(() => ({
+    search: city
+  })),
+}))

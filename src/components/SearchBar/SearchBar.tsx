@@ -1,17 +1,17 @@
-import { useState } from 'react';
 import styles from './SearchBar.module.scss';
+import { useTemporaryStore } from '@/stores/weatherStore';
 
 interface SearchBarProps {
   onSearch: (city: string) => void;
 }
 
 export const SearchBar = ({ onSearch }: SearchBarProps) => {
-  const [city, setCity] = useState('');
+  const { search, setSearch } = useTemporaryStore();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (city.trim()) {
-      onSearch(city.trim());
+    if (search) {
+      onSearch(search);
     }
   };
 
@@ -22,8 +22,8 @@ export const SearchBar = ({ onSearch }: SearchBarProps) => {
           type="text"
           className={`form-control ${styles.searchInput}`}
           placeholder="Введите название города"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
+          value={search}
+          onChange={(e) => setSearch(e.target.value.trim())}
         />
         <button className="btn btn-primary" type="submit">
           Поиск
