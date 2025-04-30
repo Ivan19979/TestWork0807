@@ -1,5 +1,5 @@
-import styles from './SearchBar.module.scss';
-import { useTemporaryStore } from '@/stores/weatherStore';
+import styles from "./SearchBar.module.scss";
+import { useTemporaryStore } from "@/stores/weatherStore";
 
 interface SearchBarProps {
   onSearch: (city: string) => void;
@@ -25,7 +25,7 @@ export const SearchBar = ({ onSearch }: SearchBarProps) => {
           value={search}
           onChange={(e) => setSearch(e.target.value.trim())}
         />
-        <button className="btn btn-primary" type="submit">
+        <button className="btn btn-success" type="submit">
           Поиск
         </button>
       </div>

@@ -1,6 +1,12 @@
 @import "./variables";
 @import "~bootstrap/scss/bootstrap";
 
+* {
+  font-family: "Comic Sans MS", "Comic Sans", cursive, "Brush Script MT",
+    "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting",
+    "Segoe Script", "Segoe Print", serif;
+}
+
 body {
   background-color: $body-bg;
   color: $text-color;
